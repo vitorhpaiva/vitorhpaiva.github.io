@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Projects — Vítor H. Paiva</title>
+<meta name="description" content="Projects and funding record of Vítor H. Paiva — 36 research projects in marine ecology and conservation across international and national funders.">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #F5F3EE;
+    --paper-2: #ECE7DB;
+    --ink: #142937;
+    --ink-70: rgba(20,41,55,0.72);
+    --ink-50: rgba(20,41,55,0.50);
+    --ink-12: rgba(20,41,55,0.12);
+    --sienna: #B2501F;
+    --sage: #3F5241;
+    --muted: #475059;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--sienna); text-decoration: none; }
+  a:hover { color: var(--ink); }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -0.01em; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 32px; }
+  .label { font-family: "Fraunces", serif; font-style: italic; font-size: 14px; color: var(--muted); }
+  .nav-link { color: var(--ink); }
+  .nav-link:hover { color: var(--sienna); }
+  .nav-link.current { color: var(--sienna); border-bottom: 1px solid var(--sienna); padding-bottom: 2px; }
+  .page-head { padding: 80px 0 56px; border-bottom: 1px solid var(--ink-12); }
+  .page-head .marker { font-family: "Fraunces", serif; font-style: italic; font-size: 15px; color: var(--sienna); margin-bottom: 18px; }
+  .page-head h1 { font-size: clamp(42px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 24px; }
+  .page-head .lede { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; max-width: 60ch; color: var(--ink-70); margin: 0 0 36px; }
+  main { padding: 72px 0 120px; }
+  h2.section-h { font-size: clamp(26px, 3vw, 36px); border-bottom: 1px solid var(--ink-12); padding-bottom: 16px; margin-bottom: 28px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  h2.section-h .count { font-size: 13px; color: var(--muted); font-family: "IBM Plex Sans", sans-serif; font-style: italic; font-weight: 300; }
+  h3.subsection-h { font-size: 20px; color: var(--sage); font-style: italic; margin: 40px 0 20px; }
+  .section + .section { margin-top: 80px; }
+  .entry { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--ink-12); }
+  .entry:last-child { border-bottom: 0; }
+  .entry .when { font-family: "Fraunces", serif; font-style: italic; font-size: 14px; color: var(--sienna); line-height: 1.6; }
+  .entry .body h4 { font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; font-weight: 500; margin: 0 0 4px; color: var(--ink); line-height: 1.4; }
+  .entry .body h4 i { color: var(--sage); font-weight: 400; }
+  .entry .body .meta { font-size: 13px; color: var(--muted); margin: 0; }
+  .entry .body .meta .sep { color: var(--ink-12); margin: 0 8px; }
+  .entry .body .tag { font-family: "IBM Plex Sans", sans-serif; font-size: 11px; letter-spacing: 0.03em; padding: 1px 7px; border: 1px solid var(--ink-12); color: var(--muted); border-radius: 2px; margin-left: 6px; }
+  .entry .body .tag-pi { border-color: var(--sienna); color: var(--sienna); }
+  .entry .body .tag-ongoing { border-color: var(--sage); color: var(--sage); }
+  .entry .budget { font-family: "Fraunces", serif; color: var(--muted); font-size: 13px; }
+  /* Side nav */
+  .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 72px; align-items: start; }
+  .side-nav { position: sticky; top: 92px; max-height: calc(100vh - 120px); overflow-y: auto; padding-right: 8px; }
+  .side-nav h3 { font-size: 13px; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 14px; font-family: "IBM Plex Sans", sans-serif; font-weight: 500; text-transform: uppercase; }
+  .side-nav a { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; color: var(--ink); font-size: 14px; border-bottom: 1px solid var(--ink-12); font-family: "Fraunces", serif; gap: 10px; }
+  .side-nav a:hover { color: var(--sienna); }
+  .side-nav .count { font-size: 11px; color: var(--muted); font-family: "IBM Plex Sans", sans-serif; white-space: nowrap; }
+  /* Simple list */
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li { padding: 14px 0; border-bottom: 1px solid var(--ink-12); display: grid; grid-template-columns: 110px 1fr; gap: 20px; }
+  ul.plain li:last-child { border-bottom: 0; }
+  ul.plain li .when { font-family: "Fraunces", serif; font-style: italic; font-size: 14px; color: var(--sienna); line-height: 1.6; }
+  ul.plain li .what { font-size: 15px; line-height: 1.5; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 32px; }
+    .side-nav { position: static; max-height: none; }
+    .side-nav a { display: inline-flex; margin-right: 10px; margin-bottom: 8px; padding: 6px 10px; border: 1px solid var(--ink-12); border-radius: 2px; gap: 6px; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding-inline: 20px; }
+    .entry, ul.plain li { grid-template-columns: 1fr; gap: 6px; }
+    .entry .when, ul.plain li .when { font-size: 13px; }
+  }
+</style>
+
+</head>
+<body>
+<nav style="position: sticky; top: 0; background: rgba(245,243,238,0.90); backdrop-filter: saturate(140%) blur(8px); -webkit-backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--ink-12); z-index: 20;">
+  <div class="wrap" style="padding-block: 18px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px 24px;">
+    <a href="index.html" class="nav-link" style="font-family: 'Fraunces', serif; font-size: 20px; letter-spacing: -0.015em;">Vítor H. Paiva</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 14px;"><a href="index.html#research" class="nav-link">Research</a><a href="projects.html" class="nav-link current">Projects</a><a href="publications.html" class="nav-link">Publications</a><a href="supervisions.html" class="nav-link">Supervisions</a><a href="lecturing.html" class="nav-link">Lecturing &amp; editorial</a><a href="outreach.html" class="nav-link">Outreach</a><a href="index.html#contact" class="nav-link">Contact</a></div>
+  </div>
+</nav>
+<header class="page-head">
+  <div class="wrap">
+    <div class="marker">i.</div>
+    <h1>Projects &amp; funding</h1>
+    <p class="lede">36 research projects over two decades — 28 international and 8 national — from LIFE Nature consortia and Horizon programmes to smaller BirdLife and FCT-backed work. The dividing line below is coordination role versus participation; both carry equal weight in day-to-day field and analytical work.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="layout">
+      <nav class="side-nav" aria-label="On this page">
+        <h3>On this page</h3>
+        <a href="#intl-coord">International · Coordination<span class="count">5</span></a>
+        <a href="#intl-part">International · Participation<span class="count">23</span></a>
+        <a href="#nat-coord">National · Coordination<span class="count">1</span></a>
+        <a href="#nat-part">National · Participation<span class="count">7</span></a>
+      </nav>
+      <div>
+        <h2 class="section-h" style="margin-bottom: 0;">International funding <span class="count">28 projects</span></h2>
+        <section id="intl-coord" class="section"><h3 class="subsection-h">Coordination <span style="color: var(--muted); font-size: 13px; font-family: IBM Plex Sans, sans-serif; font-style: normal;">(5)</span></h3><div class="entry"><div class="when">2024–2025</div><div class="body"><h4>Seabirds, sea turtles and artisanal fisheries in Cabo Verde</h4><p class="meta"><span>BirdLife International</span><span class="sep">·</span><span>Services rendered</span><span class="sep">·</span><span class="budget">€100 K</span></p></div></div><div class="entry"><div class="when">2019–2024</div><div class="body"><h4>LIFE Ilhas Barreira — barrier-island conservation in the Algarve</h4><p class="meta"><span>LIFE EU (LIFE18 NAT/PT/000927)</span><span class="sep">·</span><span>Associated beneficiary</span><span class="sep">·</span><span class="budget">€2.3 M</span></p></div></div><div class="entry"><div class="when">2017–2022</div><div class="body"><h4>Conservation of Seabirds from Cape Verde</h4><p class="meta"><span>MAVA Foundation (MAVA17022)</span><span class="sep">·</span><span>Associated beneficiary</span><span class="sep">·</span><span class="budget">€3.1 M</span></p></div></div><div class="entry"><div class="when">2013–2014</div><div class="body"><h4>Trophic ecology and at-sea movements of Bugio's petrel</h4><p class="meta"><span>British Ornithologists' Union</span><span class="sep">·</span><span class="budget">€2 K</span></p></div></div><div class="entry"><div class="when">2011–2012</div><div class="body"><h4>Feeding ecology and at-sea movements of Macaronesian shearwaters (<i>Puffinus baroli</i>)</h4><p class="meta"><span>British Ornithologists' Union</span><span class="sep">·</span><span class="budget">€2 K</span></p></div></div></section>
+        <section id="intl-part" class="section"><h3 class="subsection-h">Participation <span style="color: var(--muted); font-size: 13px; font-family: IBM Plex Sans, sans-serif; font-style: normal;">(23)</span></h3><div class="entry"><div class="when">2025–2028</div><div class="body"><h4>ALLIES — synanthropic wildlife for One Health monitoring in cities<span class="tag tag-ongoing">Ongoing</span></h4><p class="meta"><span>Spanish State Research Programme 2024–2027 (PID2024-162418OB-I00)</span><span class="sep">·</span><span>Participant</span><span class="sep">·</span><span class="budget">€226 K</span></p></div></div><div class="entry"><div class="when">2024–2025</div><div class="body"><h4>SEANIMALMOVE — movement and population dynamics of marine vertebrates</h4><p class="meta"><span>NextGenerationEU, Junta de Andalucía</span><span class="sep">·</span><span>Participant</span><span class="sep">·</span><span class="budget">€243 K</span></p></div></div><div class="entry"><div class="when">2023–2026</div><div class="body"><h4>Sustainable management of Iberian sandy beaches and wetlands, using Kentish-plover conservation<span class="tag tag-ongoing">Ongoing</span></h4><p class="meta"><span>INTERREG EU (POPTEC 0123_IBERALEX_6_E)</span><span class="sep">·</span><span>Associated beneficiary</span><span class="sep">·</span><span class="budget">€1.4 M</span></p></div></div><div class="entry"><div class="when">2023–2026</div><div class="body"><h4>SEAGHOSTS — spatial ecology and conservation of storm-petrels in the Mediterranean and NE Atlantic<span class="tag tag-ongoing">Ongoing</span></h4><p class="meta"><span>Biodiversa+</span></p></div></div><div class="entry"><div class="when">2023–2024</div><div class="body"><h4>Conservation status of the Santiago Purple Heron (<i>Ardea purpurea bournei</i>)</h4><p class="meta"><span>Critical Ecosystems Partnership Fund</span><span class="sep">·</span><span>Associated beneficiary</span><span class="sep">·</span><span class="budget">€73 K</span></p></div></div><div class="entry"><div class="when">2022–2025</div><div class="body"><h4>LIFE-Pan Puffinus — Balearic and Yelkouan shearwaters</h4><p class="meta"><span>LIFE EU (LIFE19 NAT/MT/000982)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€3.4 M</span></p></div></div><div class="entry"><div class="when">2021–2026</div><div class="body"><h4>LIFE Pterodromas4future — two Madeira <i>Pterodroma</i> petrels<span class="tag tag-ongoing">Ongoing</span></h4><p class="meta"><span>LIFE EU (LIFE20 NAT/PT/001277)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€1.8 M</span></p></div></div><div class="entry"><div class="when">2021–2025</div><div class="body"><h4>LIFE Nature@night — light pollution in Macaronesian Natura 2000 areas</h4><p class="meta"><span>LIFE EU (LIFE20 NAT/PT/001098)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€3.0 M</span></p></div></div><div class="entry"><div class="when">2021–2022</div><div class="body"><h4>Seabird conservation at Baía do Inferno, Santiago, Cabo Verde</h4><p class="meta"><span>Critical Ecosystems Partnership Fund</span><span class="sep">·</span><span>Collaborator</span><span class="sep">·</span><span class="budget">€100 K</span></p></div></div><div class="entry"><div class="when">2017–2023</div><div class="body"><h4>PADDLE — planning in a liquid world, EU–Africa–Brazil network</h4><p class="meta"><span>Horizon 2020, MSCA-RISE-2016</span><span class="sep">·</span><span class="budget">€1.7 M</span></p></div></div><div class="entry"><div class="when">2018</div><div class="body"><h4>PEP Species Guardian — <i>Pterodroma deserta</i></h4><p class="meta"><span>BirdLife International</span><span class="sep">·</span><span>Collaborator</span><span class="sep">·</span><span class="budget">€6 K</span></p></div></div><div class="entry"><div class="when">2015–2018</div><div class="body"><h4>EuroSAP — coordinated species recovery</h4><p class="meta"><span>LIFE EU (LIFE14 PRE/UK/000002)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span></p></div></div><div class="entry"><div class="when">2014–2018</div><div class="body"><h4>Berlengas — threatened habitats and species in the Berlengas SPA</h4><p class="meta"><span>LIFE EU (LIFE13 NAT/PT/000458)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€1.4 M</span></p></div></div><div class="entry"><div class="when">2014–2015</div><div class="body"><h4>PEP Species Guardian — <i>Oceanodroma monteiroi</i></h4><p class="meta"><span>BirdLife International</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€10 K</span></p></div></div><div class="entry"><div class="when">2013–2017</div><div class="body"><h4>LIFE RECOVER NATURA — Ponta de São Lourenço and Desertas</h4><p class="meta"><span>LIFE EU (LIFE12 NAT/PT/000195)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span><span class="sep">·</span><span class="budget">€1.3 M</span></p></div></div><div class="entry"><div class="when">2011–2015</div><div class="body"><h4>MARPRO — marine protected species in mainland Portugal</h4><p class="meta"><span>LIFE EU (LIFE09 NAT/PT/000038)</span><span class="sep">·</span><span>Collaborator / scientific consultant</span></p></div></div><div class="entry"><div class="when">2010–2014</div><div class="body"><h4>FAME — The Future of the Atlantic Marine Environment</h4><p class="meta"><span>INTERREG EU (2009-1/089)</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2010–2014</div><div class="body"><h4>Recovering biodiversity of Ilhéu do Porto Santo</h4><p class="meta"><span>LIFE EU (LIFE09 NAT/PT/000041)</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2009–2012</div><div class="body"><h4>Safe Islands for Seabirds</h4><p class="meta"><span>LIFE EU (LIFE07+NAT/PT/000649)</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2008</div><div class="body"><h4>Marine Important Bird Areas in Italy, coordinated by LIPU / BirdLife Italy</h4><p class="meta"><span>Italian Environmental Ministry</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2007</div><div class="body"><h4>Yelkouan shearwater project, coordinated by BirdLife Malta</h4><p class="meta"><span>LIFE EU (LIFE06 NAT/MT/000097)</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2005–2009</div><div class="body"><h4>Important Areas for Seabirds in Portugal</h4><p class="meta"><span>LIFE EU (LIFE04 NAT/PT/000213)</span><span class="sep">·</span><span>Collaborator</span></p></div></div><div class="entry"><div class="when">2005</div><div class="body"><h4>LIFE-SCANS II — small cetaceans of the Atlantic and North Sea, University of St Andrews</h4><p class="meta"><span>LIFE EU (LIFE04 NAT/GB/000245)</span><span class="sep">·</span><span>Contracted field assistant</span></p></div></div></section>
+        <h2 class="section-h" style="margin-top: 100px; margin-bottom: 0;">National funding <span class="count">8 projects</span></h2>
+        <section id="nat-coord" class="section"><h3 class="subsection-h">Coordination <span style="color: var(--muted); font-size: 13px; font-family: IBM Plex Sans, sans-serif; font-style: normal;">(1)</span></h3><div class="entry"><div class="when">2016–2017</div><div class="body"><h4>SEAPLAS — seabirds as indicators of plastic exposure</h4><p class="meta"><span>FCT</span><span class="sep">·</span><span>Coordination</span><span class="sep">·</span><span class="budget">€5 K</span></p></div></div></section>
+        <section id="nat-part" class="section"><h3 class="subsection-h">Participation <span style="color: var(--muted); font-size: 13px; font-family: IBM Plex Sans, sans-serif; font-style: normal;">(7)</span></h3><div class="entry"><div class="when">2025–2028</div><div class="body"><h4>MARCentro+ — marine-resource management in the Centro region<span class="tag tag-ongoing">Ongoing</span></h4><p class="meta"><span>CENTRO2030 (FEDER-02614400), coordinated by UC</span><span class="sep">·</span><span>Team member</span><span class="sep">·</span><span class="budget">€2.1 M</span></p></div></div><div class="entry"><div class="when">2022–2023</div><div class="body"><h4>(Less)PlasticBrain — bio-based plasticizers and human brain development, coordinated by CNC</h4><p class="meta"><span>University of Coimbra</span><span class="sep">·</span><span>Team member</span><span class="sep">·</span><span class="budget">€20 K</span></p></div></div><div class="entry"><div class="when">2015</div><div class="body"><h4>Ecosystem-services indicators of Marine Protected Areas in estuaries, coordinated by SPEA / BirdLife Portugal</h4><p class="meta"><span>Gulbenkian Foundation</span><span class="sep">·</span><span>Collaborator / scientific consultant</span></p></div></div><div class="entry"><div class="when">2012–2017</div><div class="body"><h4>Bird assessment around Faro airport and conservation of nesting Little Terns (<i>Sternula albifrons</i>), coordinated by IMAR and ICNF (Ria Formosa)</h4><p class="meta"><span>ANA Aeroportos</span></p></div></div><div class="entry"><div class="when">2004</div><div class="body"><h4>Feeding and reproductive ecology of Little Terns</h4><p class="meta"><span>FCT (37385/BSE/2001)</span><span class="sep">·</span><span>Contracted field assistant</span></p></div></div><div class="entry"><div class="when">2004</div><div class="body"><h4>Habitat selection of Pin-tailed Sandgrouse, with habitat management for conservation</h4><p class="meta"><span>Volunteer field assistant</span></p></div></div><div class="entry"><div class="when">2003</div><div class="body"><h4>Feeding and reproductive ecology of Little Terns as estuarine ecological indicators</h4><p class="meta"><span>FCT (37385/BSE/2001)</span><span class="sep">·</span><span>Volunteer field assistant</span></p></div></div></section>
+      </div>
+    </div>
+  </div>
+</main>
+<footer style="padding: 48px 0; background: var(--ink); color: var(--paper);">
+  <div class="wrap" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(245,243,238,0.7);">
+    <span>Vítor H. Paiva &nbsp;·&nbsp; <a href="mailto:vitorpaiva@uc.pt" style="color: var(--paper); border-bottom: 1px solid rgba(245,243,238,0.3);">vitorpaiva@uc.pt</a> &nbsp;·&nbsp; CFE, University of Coimbra</span>
+    <span style="font-family: 'Fraunces', serif; font-style: italic;">Last updated October 2026</span>
+  </div>
+</footer>
+</body>
+</html>
